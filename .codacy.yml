@@ -7,9 +7,7 @@ engines:
     duplication:
         exclude_paths:
             - "config/test.yml"
-            - "bin/*"
             - "lib/*"
-            - "es/*"
         config:
             languages:
                 - "ruby"
@@ -24,8 +22,5 @@ exclude_paths:
     - "benchmarks/**/*"
     - "**.min.js"
     - "**/tests/**"
-    - "app/**"
-    - "docs/**"
     - "lib/**"
-    - "es/**"
-    - "script/**"
+    - "scripts/**"

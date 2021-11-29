@@ -1,9 +1,11 @@
 #!/usr/bin/env ts-node
 
-const {sync: spawnSync} = require('cross-spawn')
 const register = require.resolve('esbuild-register')
+const { sync: spawnSync } = require('cross-spawn')
 const argv = process.argv.slice(2)
 
-process.exit(
-    spawnSync('node', ['-r', register, ...argv], { stdio: 'inherit' }).status
-)
+const program = spawnSync('node', ['-r', register, ...argv], {
+    stdio: 'inherit',
+    shell: process.platform === 'win32'
+})
+process.exit(program.status)

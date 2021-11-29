@@ -1,27 +1,16 @@
 {
     "name": "tsnd",
-    "description": "run ts module in nodejs",
-    "version": "1.0.0-beta.0",
+    "description": "runtime ts cjs & esm module",
+    "version": "1.0.0",
     "scripts": {
-        "docs:dev": "vuepress dev docs",
-        "docs:build": "vuepress build docs",
-        "docs:deploy": "GH=1 sh script/deploy-docs.sh",
-        "lib": "sh script/lib.sh",
-        "build:ui": "sh script/build-ui.sh",
-        "build:server": "rimraf app && sh script/build-server.sh",
-        "build": "rimraf lib es && rollup -c",
-        "build:types": "run-s build-temp-types roll-types",
-        "build-temp-types": "tsc --emitDeclarationOnly --outDir temp/ -p bin/",
-        "patch-types": "node script/patchTypes",
-        "roll-types": "api-extractor run && rimraf temp",
+        "build": "rimraf lib && rollup -c",
         "dev": "cross-env BUILD_ENV=DEV rollup -c -w",
-        "dist": "run-s eslint prettier build build:server build:ui",
+        "dist": "run-s eslint prettier build",
         "docs": "rimraf docs && typedoc",
         "eslint": "eslint --fix --ext .ts,.js",
-        "prettier": "prettier --write \"**/*.{js,ts,json,md}\"",
-        "prettier:docs": "prettier --write \"**/*.md\""
+        "prettier": "prettier --write \"**/*.{js,ts,json,md}\""
     },
-    "main": "index.js",
+    "main": "lib/index.js",
     "bin": {
         "tscjs": "lib/index.js",
         "tsnd-cjs": "lib/index.js",
