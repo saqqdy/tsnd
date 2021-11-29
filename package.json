@@ -1,0 +1,88 @@
+{
+    "name": "tsnd",
+    "description": "run ts module in nodejs",
+    "version": "1.0.0-beta.0",
+    "scripts": {
+        "docs:dev": "vuepress dev docs",
+        "docs:build": "vuepress build docs",
+        "docs:deploy": "GH=1 sh script/deploy-docs.sh",
+        "lib": "sh script/lib.sh",
+        "build:ui": "sh script/build-ui.sh",
+        "build:server": "rimraf app && sh script/build-server.sh",
+        "build": "rimraf lib es && node --max-old-space-size=8192 node_modules/.bin/rollup -c",
+        "build:types": "run-s build-temp-types roll-types",
+        "build-temp-types": "tsc --emitDeclarationOnly --outDir temp/ -p bin/",
+        "patch-types": "node script/patchTypes",
+        "roll-types": "api-extractor run && rimraf temp",
+        "dev": "cross-env BUILD_ENV=DEV rollup -c -w",
+        "dist": "run-s eslint prettier build build:server build:ui",
+        "docs": "rimraf docs && typedoc",
+        "eslint": "eslint --fix --ext .ts,.js",
+        "prettier": "prettier --write \"**/*.{js,ts,json,md}\"",
+        "prettier:docs": "prettier --write \"**/*.md\""
+    },
+    "main": "lib/gitm.js",
+    "bin": {
+        "gitm": "lib/gitm.js"
+    },
+    "files": [
+        "app",
+        "cache",
+        "lib",
+        "typings"
+    ],
+    "directories": {
+        "app": "app",
+        "bin": "bin",
+        "es": "es",
+        "lib": "lib",
+        "src": "src",
+        "cache": "cache",
+        "server": "server",
+        "ui": "ui",
+        "typings": "typings"
+    },
+    "dependencies": {
+        "cross-spawn": "^7.0.3",
+        "esbuild": "^0.14.0",
+        "esbuild-node-loader": "^0.6.3",
+        "esbuild-register": "^3.2.0",
+        "import-meta-resolve": "^1.1.1",
+        "js-cool": "^2.3.0"
+    },
+    "devDependencies": {
+        "@saqqdy/prettier-config": "^1.1.0",
+        "@types/node": "^16.11.10",
+        "@typescript-eslint/eslint-plugin": "^5.4.0",
+        "@typescript-eslint/parser": "^5.4.0",
+        "consola": "^2.15.3",
+        "cross-env": "^7.0.3",
+        "eslint": "^8.3.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-config-sets": "^1.5.3",
+        "eslint-plugin-tsdoc": "^0.2.14",
+        "esno": "^0.12.1",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^2.5.0",
+        "rimraf": "^3.0.2",
+        "ts-node": "^10.4.0",
+        "typedoc": "^0.22.10",
+        "typedoc-plugin-markdown": "^3.11.7",
+        "typescript": "^4.5.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/saqqdy/tsnd.git"
+    },
+    "keywords": [
+        "tsnd",
+        "git",
+        "tool"
+    ],
+    "author": "saqqdy<www.saqqdy.com>",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/saqqdy/tsnd/issues"
+    },
+    "homepage": "https://www.saqqdy.com/tsnd"
+}
