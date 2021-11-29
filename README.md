@@ -14,8 +14,6 @@
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
-[![Test coverage][codecov-image]][codecov-url]
-[![Known Vulnerabilities][snyk-image]][snyk-url]
 [![npm download][download-image]][download-url]
 [![License][license-image]][license-url]
 
@@ -67,10 +65,6 @@ tsnd-esm test.ts
 [npm-url]: https://npmjs.org/package/tsnd
 [travis-image]: https://travis-ci.com/saqqdy/tsnd.svg?branch=master
 [travis-url]: https://travis-ci.com/saqqdy/tsnd
-[codecov-image]: https://img.shields.io/codecov/c/github/saqqdy/tsnd.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/saqqdy/tsnd?branch=master
-[snyk-image]: https://snyk.io/test/npm/tsnd/badge.svg?style=flat-square
-[snyk-url]: https://snyk.io/test/npm/tsnd
 [download-image]: https://img.shields.io/npm/dm/tsnd.svg?style=flat-square
 [download-url]: https://npmjs.org/package/tsnd
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
