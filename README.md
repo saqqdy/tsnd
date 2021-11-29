@@ -23,7 +23,7 @@
 
 ## 安装
 
-### 全局安装
+### 1. 全局
 
 ```
 # 通过npm安装
@@ -33,7 +33,7 @@ npm install -g tsnd
 yarn global add tsnd
 ```
 
-### 本地安装
+### 2. 本地
 
 ```
 # 通过npm安装
