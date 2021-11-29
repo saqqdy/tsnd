@@ -2,7 +2,11 @@
     "cSpell.words": [
         "saqqdy",
         "esbuild",
-        "consola"
+        "consola",
+        "tsnd",
+        "typedoc",
+        "tscjs",
+        "tsesm"
     ],
     "typescript.tsdk": "node_modules/typescript/lib",
     "editor.codeActionsOnSave": {
