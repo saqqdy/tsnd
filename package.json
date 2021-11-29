@@ -6,7 +6,6 @@
         "build": "rimraf lib && rollup -c",
         "dev": "cross-env BUILD_ENV=DEV rollup -c -w",
         "dist": "run-s eslint prettier build",
-        "docs": "rimraf docs && typedoc",
         "eslint": "eslint --fix --ext .ts,.js",
         "prettier": "prettier --write \"**/*.{js,ts,json,md}\""
     },
@@ -61,11 +60,17 @@
     },
     "keywords": [
         "tsnd",
-        "git",
+        "tsnd-cjs",
+        "tsnd-esm",
+        "tscjs",
+        "tsesm",
+        "ts-runtime",
+        "typescript-runtime",
+        "saqqdy",
         "tool"
     ],
     "author": "saqqdy<www.saqqdy.com>",
-    "license": "GPL-3.0",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/saqqdy/tsnd/issues"
     },

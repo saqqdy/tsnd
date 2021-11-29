@@ -1,11 +1,8 @@
-// import fs from 'fs'
-// import path from 'path'
 import resolve from '@rollup/plugin-node-resolve'
 import esbuild from 'rollup-plugin-esbuild'
 import shebang from 'rollup-plugin-replace-shebang'
 import pkg from './package.json'
 
-// const isDev = process.env.BUILD_ENV === 'dev'
 const deps = Object.keys(pkg.dependencies)
 
 function getOutputConfiguration({ input, output }) {
@@ -46,8 +43,6 @@ function getOutputConfiguration({ input, output }) {
     }
 }
 
-// const production = !process.env.ROLLUP_WATCH
-
 export default () => {
     const map = []
     map.push(
@@ -76,6 +71,5 @@ export default () => {
             ]
         })
     )
-    console.log(map)
     return map
 }
