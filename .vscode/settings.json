@@ -6,7 +6,8 @@
         "tsnd",
         "typedoc",
         "tscjs",
-        "tsesm"
+        "tsesm",
+        "tsdoc"
     ],
     "typescript.tsdk": "node_modules/typescript/lib",
     "editor.codeActionsOnSave": {
