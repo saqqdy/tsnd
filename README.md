@@ -13,7 +13,6 @@
 <div style="text-align: center; margin-bottom: 20px;" align="center">
 
 [![NPM version][npm-image]][npm-url]
-[![build status][travis-image]][travis-url]
 [![npm download][download-image]][download-url]
 [![License][license-image]][license-url]
 
@@ -63,8 +62,6 @@ tsnd-esm test.ts
 
 [npm-image]: https://img.shields.io/npm/v/tsnd.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/tsnd
-[travis-image]: https://travis-ci.com/saqqdy/tsnd.svg?branch=master
-[travis-url]: https://travis-ci.com/saqqdy/tsnd
 [download-image]: https://img.shields.io/npm/dm/tsnd.svg?style=flat-square
 [download-url]: https://npmjs.org/package/tsnd
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
