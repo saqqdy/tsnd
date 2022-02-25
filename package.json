@@ -1,7 +1,7 @@
 {
     "name": "tsnd",
     "description": "runtime ts cjs & esm module",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "scripts": {
         "build": "rimraf lib && rollup -c",
         "dev": "cross-env BUILD_ENV=DEV rollup -c -w",
